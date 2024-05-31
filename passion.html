@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-N9M3tfj3vLfGsBgB0Oxf57klcZKc+VDDyuX1+y7p3eZGpS7cpiy6q4fHrkUga4TNCj58uF+47I5cVe3Io8TfMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <style>
+        /*=============================================
+        Base CSS
+        ===============================================*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {}
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            font-family: 'Quicksand', sans-serif;
+            color: rgba(255, 255, 255, 0.6); /* Changed text color to white */
+            box-sizing: border-box;
+            font-size: 14px;
+            overflow: hidden;
+            background-image: url('image/img4.jpg'); /* Specify the URL of your background image */
+			background-size: cover; /* Cover the entire viewport with the background image */
+			background-position: center; /* Center the background image */
+        }
+
+        label {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        li,
+        ol {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a,
+        img {
+            border: 0;
+            outline: none;
+            text-decoration: none;
+        }
+
+        input::-moz-focus-inner {
+            border: 0;
+        }
+
+        bo {
+            outline: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: bottom;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            font-family: 'Muli', sans-serif;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: 0;
+        }
+
+        a {
+            color: inherit;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+            font-family: "Quicksand", Arial, sans-serif;
+            font-weight: 400;
+            margin: 0 0 30px 0;
+        }
+
+        i.material-icons {
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            background-color: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            background-color: #777;
+        }
+
+        /*===========================================
+        Text Styles CSS
+        ============================================*/
+        .t-title-size {
+            font-size: 18px;
+        }
+
+        .t-bold {
+            font-weight: 600;
+        }
+
+        .t-normal {
+            font-weight: normal;
+        }
+
+        .t-center {
+            text-align: center;
+        }
+
+        .t-right {
+            text-align: right;
+        }
+
+        /*===========================================
+        Padding & Margins CSS
+        ============================================*/
+        .p-5 {
+            padding: 5px;
+        }
+
+        .p-10 {
+            padding: 10px;
+        }
+
+        .p-15 {
+            padding: 15px;
+        }
+
+        .p-20 {
+            padding: 20px;
+        }
+
+        .p-25 {
+            padding: 25px;
+        }
+
+        .p-30 {
+            padding: 30px;
+        }
+
+        .p-35 {
+            padding: 35px;
+        }
+
+        .p-40 {
+            padding: 40px;
+        }
+
+        .p-45 {
+            padding: 45px;
+        }
+        
+        .p-50 {
+    padding: 50px;
+}
+
+.p-right5 {
+    padding-right: 5px;
+}
+
+.p-right10 {
+    padding-right: 10px;
+}
+
+.p-right15 {
+    padding-right: 15px;
+}
+
+.p-right20 {
+    padding-right: 20px;
+}
+
+.p-right25 {
+    padding-right: 25px;
+}
+
+.p-right30 {
+    padding-right: 30px;
+}
+
+.p-left5 {
+    padding-left: 5px;
+}
+
+.p-left10 {
+    padding-left: 10px;
+}
+
+.p-left15 {
+    padding-left: 15px;
+}
+
+.p-left20 {
+    padding-left: 20px;
+}
+
+.p-left25 {
+    padding-left: 25px;
+}
+
+.p-left30 {
+    padding-left: 30px;
+}
+
+.m-5 {
+    margin: 5px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.m-15 {
+    margin: 15px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.m-25 {
+    margin: 25px;
+}
+
+.m-30 {
+    margin: 30px;
+}
+
+.m-35 {
+    margin: 35px;
+}
+
+.m-40 {
+    margin: 40px;
+}
+
+.m-45 {
+    margin: 45px;
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+/*===========================================
+Display Styles
+============================================*/
+.d-flex {
+    display: flex;
+}
+
+.d-flex-align-center {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.d-flex-align-center-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+/*===========================================
+Page Styles
+============================================*/
+
+.wraper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-content {
+    width: 250px;
+    overflow-y: auto;
+    height: 100%;
+    background: #222; /*
+    background: #222; /* Changed left content background color to dark grey */
+    border-right: 1px solid rgba(221, 221, 221, 0.38);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+   flex: 1;
+            overflow-y: auto;
+            margin-left: 10px;
+			background-image: url('image/img3.jpg');
+			background-size: contain;
+            border-left: 1px solid rgba(221, 221, 221, 0.38);
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo a {
+    color: #fff; /* Changed logo text color to white */
+    text-align: right;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.nav {
+    flex: 1;
+    background-color: #222; /* Changed navigation background color to dark grey */
+    justify-content: flex-end;
+    margin: 30px 0px;
+}
+
+.nav ul li,
+.nav ul li a {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav ul li a {
+    padding: 8px 0px;
+    text-transform: uppercase;
+    color: #fff; /* Changed navigation text color to white */
+    letter-spacing: 1px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.nav ul li a:hover {
+    color: #B9B2B9;
+}
+
+.nav ul li a:after {
+    content: " ";
+    width: 0;
+    height: 1px;
+    background: #fff; /* Changed navigation underline color to white */
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav ul li a:hover:after {
+    width: 100%;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.left-footer {
+    color: rgba(255, 255, 255, 0.6); /* Changed left footer text color to white */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.user-profile {
+    padding-left: 50px;
+}
+.pro-details {
+    margin-top: 30px; /* Adjust this value as needed */
+}
+.sm-text {
+    letter-spacing: 2.1px;
+    font-weight: normal;
+    color: #fff; /* Changed small text color to white */
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+
+.name {
+    letter-spacing: 1.8px;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    color: #fff; /* Changed name text color to white */
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.role {
+    letter-spacing: 1.2px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff; /* Changed role text color to white */
+}
+
+.text {
+    font-size: 15px;
+}
+
+.pr-list {
+    margin: 30px 0px;
+}
+
+.pr-list ul li {
+    margin-bottom: 8px;
+}
+
+.pr-list ul li i {
+    width: 18px;
+}
+
+.sec-title {
+    margin-bottom: 50px;
+}
+
+.pg-title {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 2;
+    color: #fff; /* Changed page title color to white */
+}
+
+.pg-sub-title {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999999;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.user-img img {
+    margin-bottom: 20px; /* Add space between images */
+    border: 5px solid #ccc; /* Add border to images */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+/* Interest Page Styles */
+
+.section1 {
+    padding: 30px;
+}
+
+.interest-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.interest-item {
+    flex: 0 0 calc(33.333% - 20px);
+    border: 5px solid #ccc; /* Add border to the interest item */
+    padding: 10px;
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+.interest-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+ .video-container {
+            margin-top: 30px;
+            border: 5px solid #ccc; /* Add border to video container */
+            border-radius: 10px; /* Optional: Add border radius for rounded corners */
+            overflow: hidden; /* Ensure video is within the container */
+            margin-bottom: 20px; /* Add margin at the bottom of each video container */
+            float: left; /* Float the containers to align them next to each other */
+            width: calc(50% - 20px); /* Set width for each video container */
+            margin-right: 20px; /* Add margin to create space between the videos */
+        }
+
+        /* Adjust YouTube video size */
+        .video-container iframe {
+            width: 100%; /* Occupy full width of the container */
+            height: 315px; /* Set height for the video */
+            border: none; /* Remove border of the video */
+        }
+
+        /* Add clearfix to ensure proper alignment */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="container">
+            <div class="left-content p-30">
+                <div class="logo">
+                    <a href="index.jsp">
+                        <span>MY </span>
+                        <span>WEBSITE</span>
+                    </a>
+                </div>
+                <div class="nav">
+                    <hr>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="passion.html">Passion</a></li>
+						<li><a href="photogallery.html">Photo Gallery</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="section1">
+                    <div class="sec-title">
+                        <div class="pg-sub-title">AMIR'S</div>
+                        <div class="pg-title">PASSION</div>
+                    </div>
+                    <div class="interest-gallery">
+                        <div class="interest-item">
+						<div class="pg-title"><b>#1 Sports 🏸 </center></b></div>
+                            <img src="image/gmbr9.jpg" alt="Interest 1">
+                            <p><b> Playing sports has been one of my passions since childhood. And Badminton is one of my favorite sports until now. Playing sports gives me a healthy body, reduces stress, and makes me active and in a positive mood. So whenever I have free time I will always play Badminton with my friends because I love playing Badminton so much ! </b></p>
+                        </div>
+                        <div class="interest-item">
+						<div class="pg-title"><b>#2 Healing 🌃 </center></b></div>
+                            <img src="image/gmbr4.jpg" alt="Interest 2">
+                            <p><b> Healing is one of my greatest desires, especially when I'm by the beach, sea, or river. As depicted in this picture, my tranquility is portrayed through a smile when I'm able to visit the beach, relax, and calm my mind with the serene view and sounds of the sea. Looking at the skies just heal me :) </b></p>
+                        </div>
+                        <div class="interest-item">
+						<div class="pg-title"><b>#3 Singing 🎤</center></b></div>
+                            <img src="image/gmbr5_1.jpg" alt4="Interest 3">
+                            <p><b> As seen in the picture, I deeply immerse myself when singing on stage hehe. Because singing or learning music is not just entertainment for me, but rather it's profound when we understand the lyrics, feel the melody, and embody the way the song is sung. So, singing is also something I'm very passionate about <3 </b></p>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="video-container">
+                            <!-- First YouTube video -->
+                           <iframe width="560" height="315" src="https://www.youtube.com/embed/czry9aZBvQY?si=PAC5UH46ZvV33YxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <p><b> It wouldn't be enjoyable if I were someone who could feel calmness when by the sea or beach. So, this is an example of a video that I can use as a reference, where the scenery is very beautiful and the sound of the sea is very peaceful.</b></p>
+                        </div>
+                        <div class="video-container">
+                            <!-- Second YouTube video -->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Br_jxgvUZHM?si=GUd08CTqZNwwTU7P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <p><b> Here, I'm showing one of my favorite songs sung by Amir Jahari, who won the Anugerah Juara Lagu (AJL38), and I also attended that time to watch the performance. For me, when someone delivers a song with soul, we can feel what they want to convey. And Amir Jahari made me shed tears right after the song ended.</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+       
